@@ -1,3 +1,3 @@
-== Shops And Things Co.
+## Shops And Things Co. ##
 
-Rails development sketch by Tim Hoover.
+Rails development sketch by [I Am Tim Hoover](http://iamtimhoover.com/).
