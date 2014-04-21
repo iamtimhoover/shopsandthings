@@ -22,12 +22,20 @@
 	
 
 
+	
+
+<% if user_signed_in? %>
+	
 	<div class="panel-footer">
 
 		<%= link_to 'Edit', edit_shop_path(@shop) %> |
 		<%= link_to 'Back', shops_path %>
 
 	</div><!-- /panel-footer -->
+
+<% end %>
+
+	
 
 
 </div><!-- /panel -->

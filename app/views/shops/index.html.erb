@@ -22,13 +22,18 @@
 
        </div><!-- /panel-body -->
 
-       <div class="panel-footer">
+       <% if user_signed_in? %>
 
-        <p><!--<%= link_to 'Show', shop %>-->
-        <%= link_to 'Edit', edit_shop_path(shop) %> | 
-        <%= link_to 'Delete', shop, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <div class="panel-footer">
 
-      </div><!-- /panel-footer -->
+          <p>
+          <%= link_to 'Edit', edit_shop_path(shop) %> | 
+          <%= link_to 'Delete', shop, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+        </div><!-- /panel-footer -->
+
+      <% end %>
+
       </div><!-- /panel --> 
 
 
