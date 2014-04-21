@@ -2,12 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+
+
 .single-shop img {
 	width:100%;
 }
 
 .box {
-	max-width: 30%;
+	width: 30%;
 	margin: 10px 2% 10px 0;
 	float:left
 }
@@ -16,4 +20,13 @@
 	width:100%;
 	margin:0 0 20px 0;
 	padding:0;
+}
+
+@media only screen 
+and (max-width : 320px) {
+.box {
+	width: 100%;
+	margin: 10px 0 10px 0;
+	float:left
+}
 }
