@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
+  resources :shops
+
   devise_for :users
   root 'pages#home'
 
   get "about" => "pages#about" #creates about path
-
-  get "shops" => "pages#shops" #creates shop path
 
   get "products" => "pages#products" #creates products path
 

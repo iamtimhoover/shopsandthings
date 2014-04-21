@@ -11,7 +11,7 @@
 
 <%= render 'layouts/header' %>
 
-<div class="container-fluid">
+<div class="container">
 
 	<% flash.each do |name, msg| %>
 		<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
@@ -20,7 +20,7 @@
 	
 
 	<%= yield %>
-</div>
+</div><!-- /container -->
 
 </body>
 </html>

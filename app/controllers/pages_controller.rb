@@ -5,9 +5,6 @@ class PagesController < ApplicationController
   def about
   end
 
-  def shops
-  end
-
   def products
   end
 end

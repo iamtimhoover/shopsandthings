@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="panel">
+	<p>
+	  <strong>Title:</strong>
+	  <%= @shop.title %>
+	</p>
+
+	<p>
+	  <strong>City:</strong>
+	  <%= @shop.city %>
+	</p>
+
+	<p>
+	  <strong>Description:</strong>
+	  <%= @shop.description %>
+	</p>
+
+	<p>
+		<strong>Link:</strong>
+		<%= link_to "#{@shop.link}", @shop.link, :target => "_blank" %>
+	</p>
+</div><!-- /panel -->
+
+<%= link_to 'Edit', edit_shop_path(@shop) %> |
+<%= link_to 'Back', shops_path %>

@@ -1,0 +1,38 @@
+<h1>Shop List</h1>
+
+<p><%= link_to 'New Shop', new_shop_path %></p>
+
+    <% @shops.each do |shop| %>
+   
+      <div class="panel panel-default">
+        
+        <div class="panel-heading">
+         <h2><%= link_to "#{shop.title}", shop %></h2>
+         <p><%= shop.city %></p>
+
+
+        </div><!-- /panel-header -->
+
+        <div class="panel-body">
+
+          <p><%= shop.description %></p>
+          <p><strong>Link:</strong><%= link_to " #{shop.link}", shop.link, :target => "_blank" %></p>
+
+       </div><!-- /panel-body -->
+
+       <div class="panel-footer">
+
+        <p><%= link_to 'Show', shop %>
+        <%= link_to 'Edit', edit_shop_path(shop) %>
+        <%= link_to 'Destroy', shop, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+      </div><!-- /panel-footer -->
+      </div><!-- /panel --> 
+
+
+    <% end %>
+
+
+<br>
+
+
