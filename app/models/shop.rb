@@ -4,4 +4,12 @@ class Shop < ActiveRecord::Base
 	
 	validates :image, presence: true
 
+	def previous
+  	Shop.where(["id < ?", id]).last
+	end
+
+	def next
+  	Shop.where(["id > ?", id]).first
+	end
+
 end

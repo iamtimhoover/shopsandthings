@@ -22,6 +22,22 @@
 	padding:0;
 }
 
+.shop-nav{
+	padding:0 20px 10px;
+}
+
+.prev-link{
+	float:left;
+}
+
+.next-link{
+	float:right;
+}
+
+.clear{
+	clear: both;
+}
+
 @media only screen 
 and (max-width : 320px) {
 .box {

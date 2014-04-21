@@ -1,3 +1,13 @@
+<div class="shop-nav">
+	<% if @shop.previous %>
+  	<%= link_to "< Previous", @shop.previous, class: "prev-link" %>
+	<% end %>
+	<% if @shop.next %>
+		<%= link_to "Next >", @shop.next, class: "next-link" %>
+	<% end %>
+	<div class="clear"></div><!-- /clear -->
+</div><!-- /container -->
+
 <div class="panel panel-default">
 	
 	<div class="panel-heading single-shop">
