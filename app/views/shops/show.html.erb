@@ -1,27 +1,33 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+	
+	<div class="panel-heading single-shop">
+		
+		<%= image_tag @shop.image.url%>
+		<h2><%= @shop.title %></h2>
+		<%= @shop.city %>
+	
+	</div><!-- /panel-heading -->
+	
+	<div class="panel-body">
+		
+		<p><strong>Description</strong></p>
+		<p><%= @shop.description %></p>
+     
+    <p><strong>Link:</strong></p>
+		<p><%= link_to "#{@shop.link}", @shop.link, :target => "_blank" %></p>
+		     
+
+  </div><!-- /panel-body -->
+
+	
 
 
-<div class="panel">
-	<p>
-	  <strong>Title:</strong>
-	  <%= @shop.title %>
-	</p>
+	<div class="panel-footer">
 
-	<p>
-	  <strong>City:</strong>
-	  <%= @shop.city %>
-	</p>
+		<%= link_to 'Edit', edit_shop_path(@shop) %> |
+		<%= link_to 'Back', shops_path %>
 
-	<p>
-	  <strong>Description:</strong>
-	  <%= @shop.description %>
-	</p>
+	</div><!-- /panel-footer -->
 
-	<p>
-		<strong>Link:</strong>
-		<%= link_to "#{@shop.link}", @shop.link, :target => "_blank" %>
-	</p>
+
 </div><!-- /panel -->
-
-<%= link_to 'Edit', edit_shop_path(@shop) %> |
-<%= link_to 'Back', shops_path %>
