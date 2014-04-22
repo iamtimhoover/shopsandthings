@@ -14,6 +14,7 @@ gem 'devise', '~> 3.1.0.rc2'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk', '~> 1.20.0'
 gem 'geocoder'
+gem 'gmaps4rails', '~> 2.0.4'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development

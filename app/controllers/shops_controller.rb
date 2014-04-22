@@ -13,6 +13,13 @@ class ShopsController < ApplicationController
   # GET /shops/1
   # GET /shops/1.json
   def show
+    @hash = Gmaps4rails.build_markers(@shop.locations) do |shop, marker|
+      marker.lat shop.latitude
+      marker.lng shop.longitude
+      marker.infowindow @shop.title
+      
+    end
+    
   end
 
   # GET /shops/new
