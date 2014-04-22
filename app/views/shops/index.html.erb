@@ -7,7 +7,7 @@
       <div class="panel panel-default box">
         
         <div class="panel-heading">
-         <h3><%= link_to "#{shop.title}", shop %></h3>
+         <h3><%= link_to "#{shop.title}", shop, 'data-no-turbolink' => true %></h3>
          <p><%= shop.city %></p>
 
          <% if user_signed_in? %>
