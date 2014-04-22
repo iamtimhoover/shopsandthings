@@ -9,7 +9,10 @@
         <div class="panel-heading">
          <h3><%= link_to "#{shop.title}", shop %></h3>
          <p><%= shop.city %></p>
-         <p><%= shop.id %></p>
+
+         <% if user_signed_in? %>
+          <p><%= shop.id %></p>
+         <% end %>
 
 
         </div><!-- /panel-header -->
