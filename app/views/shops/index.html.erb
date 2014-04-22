@@ -1,3 +1,23 @@
+
+
+<% if !user_signed_in? %>
+  <div class="jumbotron">
+  <h1>Welcome to Shops and Things.</h1>
+  <p>Discover, explore, and buy from the best shops in the world.</p>
+    <p>
+      <%= link_to "Log In", new_user_session_path, class: "btn btn-primary btn-lg" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+    </p>
+     </div><!-- /jumbotron -->
+  <% else %>
+    <p>Thanks for signing in!</p>
+
+  <% end %>
+
+  
+    
+
+
 <h1>Shop List</h1>
 
 <p><%= link_to 'New Shop', new_shop_path %></p>

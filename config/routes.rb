@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :shops
 
   devise_for :users
-  root 'pages#home'
+  root 'shops#index'
 
   get "about" => "pages#about" #creates about path
 
