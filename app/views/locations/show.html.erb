@@ -24,7 +24,7 @@
 <p>
   <strong>Other locations within 5 miles:</strong>
 	<% for location in @location.nearbys(15) %>
-		<li><%= link_to location.address, location %> (<%= location.distance %>)</li>
+		<li><%= link_to location.address, location %> (<%= "#{location.distance.round(2)} Miles Away" %>)</li>
 	<% end %>
 </p>
 
