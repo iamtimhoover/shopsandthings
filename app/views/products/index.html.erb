@@ -13,7 +13,9 @@
 
         <div class="panel-body">
           <%= image_tag product.image.url(:medium)%>
-          <%= product.shop.title %>
+          <%= link_to product.shop do%>
+            <%= product.shop.title%>
+          <% end %>
         </div><!-- panel-body -->
 
         <div class="panel-footer">
