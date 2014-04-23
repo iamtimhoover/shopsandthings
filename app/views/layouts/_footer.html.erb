@@ -1,8 +1,17 @@
+
 <div class="navbar navbar-fixed-bottom navbar-default" role="navigation">
+	 <% if user_signed_in? %>
 	<div class="container footer">
 		<ul class="nav navbar-nav navbar-right">
 			<li><%= link_to "Locations", locations_path %></li>
 			<li><%= link_to "Products", products_path %></li>
 		</ul>
 	</div><!-- /container -->
+	<% else %>
+		<div class="container footer">
+			<ul class="nav navbar-nav navbar-right">
+				<li><%= link_to "Footer PlaceHolder", root_path %></li>
+			</ul>
+		</div><!-- /footer -->
+	<% end %>
 </div><!-- /navbar -->
