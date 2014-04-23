@@ -20,13 +20,13 @@
 </p>
 
 
-<!-- This shows nearby locations -->
+<!-- This shows nearby locations 
 <p>
   <strong>Other locations within 5 miles:</strong>
 	<% for location in @location.nearbys(15) %>
 		<li><%= link_to location.address, location %> (<%= "#{location.distance.round(2)} Miles Away" %>)</li>
 	<% end %>
-</p>
+</p>-->
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>
