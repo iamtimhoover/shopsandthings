@@ -82,6 +82,28 @@
 
 </div><!-- /panel -->
 
+
+
+<!-- This shows nearby locations -->
+
+
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+  	<strong>Other shops within 5 miles:</strong>
+	</div>
+  	<div class="panel-body">
+  <% @shop.locations.each do |location| %>
+		<% for location in location.nearbys(15) %>
+			<h4><%= link_to location.shop.title, location.shop %></h4>
+			<%= link_to location.address, location.shop %> (<%= "#{location.distance.round(2)} Miles Away" %>)
+		<% end %>
+	<% end %>
+	</div><!-- panel-body -->
+</div><!-- /panel -->
+
+<!-- - - - - - - -->
+
 <script type="text/javascript">
 	handler = Gmaps.build('Google');
 handler.buildMap({
