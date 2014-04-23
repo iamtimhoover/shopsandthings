@@ -22,9 +22,32 @@
 	</div><!-- /panel-heading -->
 	
 	<div class="panel-body">
+
+		<p><strong>Link:</strong></p>
+		<p><%= link_to "#{@shop.link}", @shop.link, :target => "_blank" %></p>
 		
 		<p><strong>Description</strong></p>
 		<p><%= @shop.description %></p>
+
+		<p><strong>Products:</strong></p>
+
+		
+
+
+
+		<% @shop.products.each do |product| %>
+			<div class="product-box">
+				<%= link_to product do%>
+          <%= image_tag product.image.url(:medium)%>
+        <% end %>
+
+            
+			</div><!-- /product-box -->
+		<% end %>
+
+		 </div><!-- /panel-body -->
+
+		<div class="panel-footer">
 
 		<p><strong>Address</strong></p>
 		<% @shop.locations.each do |location| %>
@@ -32,15 +55,14 @@
 		<% end %>
 		
      
-    <p><strong>Link:</strong></p>
-		<p><%= link_to "#{@shop.link}", @shop.link, :target => "_blank" %></p>
+    
 
 		<div class="mapbox">
   		<div id="map" style='width: 100%; height: 400px;'></div>
 		</div>
 		     
-
-  </div><!-- /panel-body -->
+</div><!-- /panel-footer -->
+ 
 
 	
 

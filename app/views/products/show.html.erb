@@ -1,19 +1,47 @@
-<p id="notice"><%= notice %></p>
+<div class="shop-nav">
+	<% if @product.previous %>
+  	<%= link_to "< Previous", @product.previous, class: "prev-link" %>
+	<% end %>
+	<% if @product.next %>
+		<%= link_to "Next >", @product.next, class: "next-link" %>
+	<% end %>
+	<div class="clear"></div><!-- /clear -->
+</div><!-- /container -->
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
+
+ <div class="panel panel-default">
+        
+  <div class="panel-heading">
+   	<h2><%= @product.title %></h2>
+   	<p>
+  		<strong>Shop:</strong>
+  		<%= link_to @product.shop do%>
+          <%= @product.shop.title%>
+        <% end %>
+
+  		
+		</p>
+  </div><!-- /panel-heading -->
+
+
+
+	
+	<div class="panel-body single-product">
+
+			<p>
+		<%= image_tag @product.image.url%>
 </p>
 
-<p>
+	</div><!-- /panel-body -->
+
+	<div class="panel-footer">
+		<p>
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
 
-<p>
-  <strong>Shop:</strong>
-  <%= @product.shop_id %>
-</p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+
+</div><!-- /panel-footer -->
