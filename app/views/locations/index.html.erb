@@ -7,9 +7,9 @@
 
     
  
-        <h2><%= location.shop.title %></h2>
+        <h3><%= location.shop.title %></h3>
         <p><%= location.address %></p>
-        <p><strong>Lat:</strong><%= location.latitude %><strong>Long:</strong><%= location.longitude %> | 
+        <p><strong>Lat:</strong><%= location.latitude %><strong> | Long:</strong><%= location.longitude %> | 
         <%= link_to 'Show', location %>
         <%= link_to 'Edit', edit_location_path(location) %>
         <%= link_to 'Delete', location, method: :delete, data: { confirm: 'Are you sure?' } %></p>
