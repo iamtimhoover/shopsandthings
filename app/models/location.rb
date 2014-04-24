@@ -1,5 +1,5 @@
 class Location < ActiveRecord::Base
-	belongs_to :shop, dependent: :destroy
+	belongs_to :shop
 
 	geocoded_by :address
 	reverse_geocoded_by :latitude, :longitude
