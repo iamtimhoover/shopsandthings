@@ -7,13 +7,13 @@
 
     <p>
  
-        <%= location.shop.title %>
+        <%= location.shop_id %>
         <%= location.address %>
         <%= location.latitude %>
         <%= location.longitude %>
         <%= link_to 'Show', location %>
         <%= link_to 'Edit', edit_location_path(location) %>
-        <%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %>
+        
 
     </p>
 
