@@ -5,18 +5,18 @@
 
     <% @locations.each do |location| %>
 
-    <p>
+    <li>
  
-        <%= location.shop.title %>
-        <%= location.address %>
-        <%= location.latitude %>
-        <%= location.longitude %>
+        <h2><%= location.shop.title %></h2>
+        <p><%= location.address %></p>
+        <p><%= location.latitude %><%= location.longitude %></p>
+        <p>
         <%= link_to 'Show', location %>
         <%= link_to 'Edit', edit_location_path(location) %>
-        <%= link_to 'Delete', location, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Delete', location, method: :delete, data: { confirm: 'Are you sure?' } %></p>
         
 
-    </p>
+    </li>
 
       <% end %>
 
